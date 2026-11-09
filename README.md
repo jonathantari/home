@@ -1,7 +1,8 @@
 # home — jonathantari.com
 
-Serves the bare domain **jonathantari.com** (no www).
+Serves the bare domain **jonathantari.com** (no www): Jonathan Tari's home page.
 
-For now it just forwards every visitor to **https://www.jonathantari.com**, which is still the Google Sites page.
+- `index.html` — the home page (single self-contained file; fonts from Google Fonts).
+- `404.html` — sends unknown paths back to the home page.
 
-Later, the real home page can live here, with www pointed at GitHub too.
+www.jonathantari.com is still the old Google Sites page until www is pointed at GitHub too.
