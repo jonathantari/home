@@ -38,8 +38,11 @@ html.fit .ttl{font-size:var(--tf)!important;letter-spacing:-0.015em}
 html.fit .pnl{position:relative;padding-right:min(38%,540px)!important;padding-bottom:16px!important}
 html.fit .stk{position:absolute;right:1%;bottom:0;margin:0!important;z-index:2}
 html.measuring .lean{transition:none!important;transform:skewX(-14deg)!important}
-.flt{transition:translate .35s cubic-bezier(.2,.7,.2,1)}
-.flt:hover{translate:0 -10px}
+.flt{cursor:pointer;transition:scale .3s cubic-bezier(.2,.7,.2,1)}
+.flt.front{z-index:3!important;scale:1.08}
+.flt:focus-visible{outline:1px solid #1C1309;outline-offset:3px}
+html.fit .pnl.inl{padding-right:0!important}
+html.fit .pnl.inl .stk{position:static;margin:0!important}
 @keyframes ePop{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
 @media (prefers-reduced-motion:reduce){.pop,.pop2,.pop3{animation:none}.word .lean,.flt{transition:none}}
 </style>
@@ -68,20 +71,20 @@ window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});
 <span class="lean ttl" style="font-weight: 300; text-transform: uppercase; line-height: 0.78">Hardware Founder</span>
 </button>
 <div id="p0" hidden>
-<div class="pnl" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 20px 0 40px 4%">
-<div style="flex: 1 1 560px; max-width: 1040px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 14px">
+<div class="pnl inl" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px 48px; padding: 20px 0 40px 4%">
+<div style="flex: 1 1 auto; max-width: 1000px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 14px">
 <span class="pop lean" style="font-weight: 200; font-size: clamp(96px, 13vw, 190px); line-height: 0.75; letter-spacing: -0.04em; margin-right: 6px">0→1</span>
 <span class="pop2" style="display: inline-block; transform: rotate(-3deg) skewX(-14deg); background: #1C1309; color: var(--bg); padding: 12px 18px 6px; text-transform: uppercase; font-size: clamp(30px, 4vw, 58px); line-height: 0.85">Fundraising</span>
 <span class="pop2" style="display: inline-block; transform: rotate(2deg) skewX(-14deg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; font-size: clamp(30px, 4vw, 56px); line-height: 1">deep tech</span>
 <span class="pop2 mono" style="display: inline-block; transform: rotate(-6deg); border: 1.5px dashed #1C1309; padding: 10px 14px 8px; font-size: clamp(14px, 1.6vw, 22px); letter-spacing: 0.16em; text-transform: uppercase; line-height: 1">Pitch decks</span>
 <span class="pop3 lean" style="text-transform: uppercase; font-size: clamp(30px, 4vw, 56px); line-height: 0.8; font-weight: 400">Founder<br>dynamics</span>
 <span class="pop3 lean" style="font-size: clamp(56px, 7vw, 104px); line-height: 0.8; font-weight: 300">Exited<sup class="mono" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; vertical-align: top; margin-left: 4px">*acquired</sup></span>
-</div>
-<div class="pop3 stk" style="margin-left: auto; transform: rotate(-6deg) skewX(-12deg); background: var(--chip); color: var(--chipInk); padding: 14px 22px 10px; display: flex; flex-direction: column; align-items: flex-end; text-transform: uppercase; line-height: 0.82; max-width: 100%; box-sizing: border-box">
+<div class="pop3 stk" style="margin-left: 12px; transform: rotate(-6deg) skewX(-12deg); background: var(--chip); color: var(--chipInk); padding: 14px 22px 10px; display: flex; flex-direction: column; align-items: flex-end; text-transform: uppercase; line-height: 0.82; max-width: 100%; box-sizing: border-box">
 <span class="mono" style="font-size: 10px; letter-spacing: 0.18em; margin-bottom: 6px">backed by</span>
 <span style="font-size: clamp(36px, 4.4vw, 60px)">Y Combinator</span>
 <span style="font-size: clamp(48px, 6vw, 84px); font-weight: 200">Antler</span>
 <span style="font-size: clamp(24px, 2.8vw, 38px)">Entrepreneur First</span>
+</div>
 </div>
 </div>
 </div>
@@ -126,9 +129,9 @@ window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});
 <div id="p2" hidden>
 <div class="pnl" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 20px 0 40px 4%">
 <span class="pop" style="display: inline-flex; flex-direction: column; align-items: flex-start; gap: 8px"><span class="mono" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding-left: 4px">former</span><span style="display: inline-block; transform: rotate(-3deg) skewX(-14deg); background: #1C1309; color: var(--bg); padding: 12px 18px 6px; text-transform: uppercase; font-size: clamp(30px, 4vw, 58px); line-height: 0.85">Chief of Staff</span></span>
-<span class="pop2" style="position: relative; display: inline-block; padding-bottom: 1.3em; margin-right: 1.4em; font-size: clamp(22px, 2.6vw, 36px)"><span class="flt" style="position: absolute; left: 6%; bottom: 0; white-space: nowrap; transform: rotate(-4deg) skewX(-14deg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Stage-gated production</span><span class="flt" style="position: relative; z-index: 1; display: inline-block; transform: rotate(3deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Scaled operating models</span></span>
+<span class="pop2 ovl" style="position: relative; display: inline-block; padding-bottom: 1.3em; margin-right: 1.4em; font-size: clamp(22px, 2.6vw, 36px)"><span class="flt" style="position: absolute; left: 6%; bottom: 0; white-space: nowrap; transform: rotate(-4deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Stage-gated production</span><span class="flt" style="position: relative; z-index: 1; display: inline-block; transform: rotate(3deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Scaled operating models</span></span>
 <span class="pop2 lean" style="display: inline-flex; flex-direction: column; align-items: flex-start; font-size: clamp(48px, 6.4vw, 92px); line-height: 0.85; font-weight: 300"><span>designing</span><span style="display: inline-flex; align-items: flex-start; gap: 0.12em; white-space: nowrap"><span class="mono" style="font-size: 11px; line-height: 1.2; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 0.5em; font-weight: 400">high<br>impact</span><span>empowered teams</span></span></span>
-<span class="pop2" style="position: relative; display: inline-block; padding-top: 1.35em; margin-right: 1em; font-size: clamp(26px, 3.2vw, 44px)"><span class="flt" style="display: inline-block; transform: rotate(3deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Commercial leader</span><span class="flt" style="position: absolute; left: 24%; top: 0; white-space: nowrap; transform: rotate(-7deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Product leader</span></span>
+<span class="pop2 ovl" style="position: relative; display: inline-block; padding-top: 1.35em; margin-right: 1em; font-size: clamp(26px, 3.2vw, 44px)"><span class="flt" style="position: relative; display: inline-block; transform: rotate(3deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Commercial leader</span><span class="flt" style="position: absolute; left: 24%; top: 0; white-space: nowrap; transform: rotate(-7deg) skewX(-14deg); background: var(--bg); border: 1.5px solid #1C1309; border-radius: 999px; padding: 8px 26px 2px; text-transform: uppercase; line-height: 1">Product leader</span></span>
 <span class="pop3 lean" style="display: inline-flex; flex-direction: column"><span class="mono" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase">teams of</span><span style="font-size: clamp(48px, 6vw, 88px); line-height: 0.85; font-weight: 300; white-space: nowrap">2<span style="display: inline-block; width: 0.22em; height: 0.035em; min-height: 1.5px; background: #1C1309; vertical-align: 0.3em; margin: 0 0.06em"></span>4,000<span style="font-size: 0.5em; vertical-align: 0.8em; margin-left: 0.04em; font-weight: 400">+</span></span></span>
 <div class="pop3 stk" style="margin-left: auto; transform: rotate(-5deg) skewX(-12deg); background: var(--chip); color: var(--chipInk); padding: 14px 22px 10px; display: flex; flex-direction: column; align-items: flex-start; text-transform: uppercase; line-height: 0.82; max-width: 100%; box-sizing: border-box"><span class="mono" style="font-size: 10px; letter-spacing: 0.18em; text-transform: lowercase; margin-bottom: 6px">has implemented</span><span style="font-size: clamp(64px, 8vw, 112px); font-weight: 200">OKRs</span><span style="font-size: clamp(28px, 3.2vw, 44px); padding-left: 0.8em">North Star metrics</span><span style="font-size: clamp(22px, 2.4vw, 32px); text-transform: none; padding-left: 0.2em">finding the metrics that matter</span><span style="font-size: clamp(20px, 2.4vw, 32px); padding-left: 0.6em">First principles predictability</span><span style="font-size: clamp(20px, 2.2vw, 30px); text-transform: none">outcome-driven innovation</span></div>
 </div>
@@ -152,6 +155,7 @@ document.querySelectorAll('[data-t]').forEach(function(o){o.setAttribute('aria-e
 if(!open){b.setAttribute('aria-expanded','true');document.getElementById(b.getAttribute('aria-controls')).hidden=false;}
 fit();
 });});
+document.querySelectorAll('.ovl').forEach(function(g){var ps=g.querySelectorAll('.flt');ps.forEach(function(p){p.setAttribute('role','button');p.tabIndex=0;function act(){var on=!p.classList.contains('front');ps.forEach(function(o){o.classList.remove('front');});if(on)p.classList.add('front');}p.addEventListener('click',act);p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}});});});
 var mq=matchMedia('(min-width: 900px) and (min-height: 560px)');
 var de=document.documentElement;
 function fits(){
@@ -162,8 +166,9 @@ return true;}
 function fit(){
 if(!mq.matches){de.classList.remove('fit');de.style.removeProperty('--tf');return;}
 de.classList.add('fit','measuring');
-var lo=40,hi=Math.min(window.innerWidth*0.45,window.innerHeight*0.7);
-for(var k=0;k<14;k++){var m=(lo+hi)/2;de.style.setProperty('--tf',m+'px');if(fits())lo=m;else hi=m;}
+var lo=Math.min(window.innerWidth*0.075,window.innerHeight*0.16),hi=Math.min(window.innerWidth*0.45,window.innerHeight*0.7);
+de.style.setProperty('--tf',lo+'px');
+if(fits()){for(var k=0;k<14;k++){var m=(lo+hi)/2;de.style.setProperty('--tf',m+'px');if(fits())lo=m;else hi=m;}}
 de.style.setProperty('--tf',Math.floor(lo)+'px');
 de.classList.remove('measuring');}
 var raf;window.addEventListener('resize',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(fit);});
